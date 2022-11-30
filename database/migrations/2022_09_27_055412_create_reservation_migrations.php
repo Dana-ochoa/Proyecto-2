@@ -33,6 +33,6 @@ class CreateReservationMigrations extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reservation_migrations');
+        Schema::dropIfExists('reservations');
     }
 }

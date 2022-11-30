@@ -40,13 +40,13 @@ class ReservationController extends Controller
         $request->validate([
             'nombre' => 'required|max:255',
             'correo' => 'required',
-            'telefono' => 'required|max:20',
+            'telefono' => 'required|numeric|digits:10',
             'personas' => 'required|min:1',
             'fecha' => 'required',
             'hora' => 'required',
         ]);
 
-        //dd($request->all());
+        dd($request->all());
 
         $reservation = Reservation::create($request->all());
 

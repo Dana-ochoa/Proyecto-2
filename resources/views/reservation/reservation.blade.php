@@ -23,7 +23,7 @@
         
         <label for="correo"> Correo: </label>
         <input type="email" name="correo">
-        @error('email'){{ $message}} @enderror
+        @error('email') {{ $message}} @enderror
         <br><br>
         
         <label for="telefono"> Telefono: </label>
