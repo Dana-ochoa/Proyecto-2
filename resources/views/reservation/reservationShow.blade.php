@@ -9,6 +9,11 @@
 </head>
 <body>
     <h1>Informacion Reservation</h1>
+    @if(isset($message))
+    <div class="alert alert-secondary">
+        {{ $message }}
+    </div>
+    @endif
     <h2>{{ $reservation->nombre }}</h2>
 
     <p>

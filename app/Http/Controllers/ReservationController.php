@@ -46,11 +46,14 @@ class ReservationController extends Controller
             'hora' => 'required',
         ]);
 
-        dd($request->all());
+        //dd($request->all());
 
         $reservation = Reservation::create($request->all());
 
-        return view('reservation.reservationShow', compact('reservation'));
+        return view('reservation.reservationShow', compact('reservation'))
+        ->with([
+            'message' => 'Se creo la reservacion exitosamente!'
+        ]);
         
     }
 
@@ -116,5 +119,10 @@ class ReservationController extends Controller
 
         return redirect('/reservation');
 
+    }
+
+    public function getReservationJson()
+    {
+        return response()->json(Reservation::all());
     }
 }
