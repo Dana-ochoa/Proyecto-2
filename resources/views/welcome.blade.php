@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -39,7 +39,7 @@
           <li class="active"><a href="#" data-nav-section="welcome">Bienvenidos</a></li>
           <li><a href="#" data-nav-section="specialties">Especialidades</a></li>
           <li><a href="#" data-nav-section="menu">Menu</a></li>
-          <li><a href="/reservation/create">Reservacion</a></li>
+          <li><a href="{{ route('reservation.create') }}">Reservacion</a></li>
           <!--<li><a href="#" data-nav-section="events">Eventos</a></li>-->
           <li><a href="#" data-nav-section="contact">Contacto</a></li>
         </ul>
