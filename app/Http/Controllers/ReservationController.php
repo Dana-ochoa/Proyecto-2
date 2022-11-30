@@ -53,7 +53,7 @@ class ReservationController extends Controller
         return view('reservation.reservationShow', compact('reservation'))
         ->with([
             'message' => 'Se creo la reservacion exitosamente!'
-        ]);
+        ]); 
         
     }
 
