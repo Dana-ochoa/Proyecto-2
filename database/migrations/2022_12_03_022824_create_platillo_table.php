@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Platillo extends Migration
+class CreatePlatilloTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class Platillo extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('platillo');
         Schema::create('platillo', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->float('costo');
-            $table->softDeletes();
+            $table->string("nombre");
+            $table->float("precio");
+            $table->integer("cantidad");
+
         });
-
-
     }
 
     /**
@@ -31,6 +29,6 @@ class Platillo extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('platillo');
     }
 }

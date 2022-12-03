@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Mesa extends Migration
+class CreateMesaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,11 @@ class Mesa extends Migration
      */
     public function up()
     {
-        //Schema::dropIfExists('mesa');
         Schema::create('mesa', function (Blueprint $table) {
             $table->id();
-            $table->integer('personas');
-            $table->boolean('estado');
-            $table->unsignedBigInteger('ID_mesero');
-            $table->foreign('ID_mesero')->references('id')->on('mesero');
-            $table->softDeletes();
-            
+            $table->integer("persona");
+            $table->boolean("estado");
+            $table->timestamps();
         });
     }
 
@@ -32,6 +28,6 @@ class Mesa extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('mesa');
     }
 }

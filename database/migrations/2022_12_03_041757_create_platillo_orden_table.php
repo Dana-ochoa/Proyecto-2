@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateIngredientesTable extends Migration
+class CreatePlatilloOrdenTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateIngredientesTable extends Migration
      */
     public function up()
     {
-        //Schema::dropIfExists('ingredientes');
-        Schema::create('ingredientes', function (Blueprint $table) {
-            $table->id();
-            $table->string('nombre');
+        Schema::create('platillo_orden', function (Blueprint $table) {
+            $table->foreignId('orden_id');
+            $table->foreignId('platillo_id');
             $table->integer('cantidad');
-            $table->double('costo');
-            $table->softDeletes();
+
+            $table->foreign('orden_id')->references('id')->on('orden');
+            $table->foreign('platillo_id')->references('id')->on('platillo');
         });
     }
 
@@ -30,6 +30,6 @@ class CreateIngredientesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ingredints');
+        Schema::dropIfExists('platillo_orden');
     }
 }
