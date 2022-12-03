@@ -19,6 +19,8 @@ class CreatePlatilloTable extends Migration
             $table->float("precio");
             $table->integer("cantidad");
 
+            $table->softDeletes();
+
         });
     }
 

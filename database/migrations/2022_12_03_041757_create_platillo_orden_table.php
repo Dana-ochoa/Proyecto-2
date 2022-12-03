@@ -20,6 +20,8 @@ class CreatePlatilloOrdenTable extends Migration
 
             $table->foreign('orden_id')->references('id')->on('orden');
             $table->foreign('platillo_id')->references('id')->on('platillo');
+
+            $table->softDeletes();
         });
     }
 

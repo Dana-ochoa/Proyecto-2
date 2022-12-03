@@ -283,7 +283,7 @@
     </div>
   </section>
 
-  <!--<section class="probootstrap-section-bg overlay" style="background-image: url(img/hero_bg_5.jpg);" data-stellar-background-ratio="0.5" data-section="reservation">
+ <!-- <section class="probootstrap-section-bg overlay" style="background-image: url(img/hero_bg_5.jpg);" data-stellar-background-ratio="0.5" data-section="reservation">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center probootstrap-animate">

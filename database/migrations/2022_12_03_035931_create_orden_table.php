@@ -21,6 +21,8 @@ class CreateOrdenTable extends Migration
             $table->integer("total");
 
             $table->foreign('mesa_id')->references('id')->on('mesa');
+
+            $table->softDeletes();
         });
     }
 

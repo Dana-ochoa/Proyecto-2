@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 
-// Route::get('/reservacion',[ReservationController::class, 'index']);
+Route::get('/reservacion',[ReservationController::class, 'index']);
 // Route::get('/reservacion/{id}',[ReservationController::class, 'show']);
 
 Route::resource('/reservation',ReservationController::class);

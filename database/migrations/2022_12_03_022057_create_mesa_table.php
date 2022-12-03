@@ -18,6 +18,8 @@ class CreateMesaTable extends Migration
             $table->integer("persona");
             $table->boolean("estado");
             $table->timestamps();
+
+            $table->softDeletes();
         });
     }
 
