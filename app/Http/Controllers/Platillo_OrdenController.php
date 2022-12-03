@@ -80,6 +80,7 @@ class Platillo_OrdenController extends Controller
      */
     public function destroy(Platillo_Orden $platillo_Orden)
     {
-        //
+        $platillo_Orden->delete();
+        return redirect('/platillo_orden');
     }
 }

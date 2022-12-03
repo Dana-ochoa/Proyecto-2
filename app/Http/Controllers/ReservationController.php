@@ -117,6 +117,7 @@ class ReservationController extends Controller
     {
         $reservation->delete();
 
+        $reservation->delete();
         return redirect('/reservation');
 
     }

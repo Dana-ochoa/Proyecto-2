@@ -81,6 +81,7 @@ class OrdenController extends Controller
      */
     public function destroy(Orden $orden)
     {
+        $orden->delete();
         return redirect('/orden');
     }
 }

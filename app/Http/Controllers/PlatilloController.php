@@ -82,6 +82,7 @@ class PlatilloController extends Controller
      */
     public function destroy(Platillo $platillo)
     {
+        $platillo->delete();
         return redirect('/platillo');
     }
 }
