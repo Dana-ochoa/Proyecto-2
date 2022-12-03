@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Orden extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id','_token'];
+    protected $table = "orden";
+
+    public $timestamps = false;
 }

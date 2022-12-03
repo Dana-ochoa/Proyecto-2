@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Platillo_Orden extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id','_token'];
+    protected $table = "platillo_orden";
+
+    public $timestamps = false;
 }

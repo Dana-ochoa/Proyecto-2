@@ -20,7 +20,7 @@ class CreateReservationMigrations extends Migration
             $table->time('hora');
             $table->string('nombre');
             $table->string('correo');
-            $table->string('telefono', 20);
+            $table->string('telefono');
             //$table->string('correo')->nullable(); (que no es un campo obligatorio)
             //$table->timestamps();
         });

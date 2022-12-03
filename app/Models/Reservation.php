@@ -10,6 +10,7 @@ class Reservation extends Model
     use HasFactory;
     //protected $fillable= ['nombre', 'correo', 'telefono', 'personas','fecha', 'hora'];
     protected $guarded = ['id','_token'];
+    protected $table = "reservations";
 
     public $timestamps = false;
 }
