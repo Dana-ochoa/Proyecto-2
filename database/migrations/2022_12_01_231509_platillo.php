@@ -20,6 +20,8 @@ class Platillo extends Migration
             $table->float('costo');
             $table->softDeletes();
         });
+
+
     }
 
     /**
