@@ -13,7 +13,7 @@ class Mesa extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('mesa');
+        //Schema::dropIfExists('mesa');
         Schema::create('mesa', function (Blueprint $table) {
             $table->id();
             $table->integer('personas');

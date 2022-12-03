@@ -18,7 +18,7 @@ class Mesero extends Migration
             $table->id();
             $table->string('nombre');
             $table->integer('telefono');
-            $table->softDeletes();            
+            $table->softDeletes();
         });
     }
 

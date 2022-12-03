@@ -13,7 +13,7 @@ class Orden extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('orden');
+        //Schema::dropIfExists('orden');
         Schema::create('orden', function (Blueprint $table) {
             $table->id();
             $table->timestamp('fecha_creacion');

@@ -13,17 +13,20 @@ class OrdenContenido extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('orden_contenido');
+        //Schema::dropIfExists('orden_contenido');
         Schema::create('orden_contenido', function (Blueprint $table) {
             $table->id();
             $table->timestamp('fecha_inicio');
             $table->integer('cantidad');
-            $table->unsignedBigInteger('orden');
-            $table->foreign('ID_orden')->references('id')->on('orden');
+            $table->unsignedBigInteger('ID_orden');
             $table->unsignedBigInteger('ID_platillo');
-            $table->foreign('ID_platillo')->references('id')->on('platillo');
             $table->softDeletes();
         });
+
+        //Schema::table('orden_contenido', function($table) {
+          //  $table->foreign('ID_orden')->references('id')->on('orden');
+          //  $table->foreign('ID_platillo')->references('id')->on('platillo');
+        //});
     }
 
     /**
