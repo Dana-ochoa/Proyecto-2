@@ -14,7 +14,8 @@ class OrdenController extends Controller
      */
     public function index()
     {
-        //
+        $ordens = Orden::all();
+        return view('orden.ordenIndex', compact('ordens'));
     }
 
     /**
@@ -24,7 +25,7 @@ class OrdenController extends Controller
      */
     public function create()
     {
-        //
+        return view('orden.ordenCreate');
     }
 
     /**
@@ -46,7 +47,7 @@ class OrdenController extends Controller
      */
     public function show(Orden $orden)
     {
-        //
+        return view('orden.ordenShow', compact('orden'));
     }
 
     /**
@@ -80,6 +81,6 @@ class OrdenController extends Controller
      */
     public function destroy(Orden $orden)
     {
-        //
+        return redirect('/orden');
     }
 }

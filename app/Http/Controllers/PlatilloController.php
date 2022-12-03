@@ -14,7 +14,8 @@ class PlatilloController extends Controller
      */
     public function index()
     {
-        //
+        $platillos = Platillo::all();
+        return view('platillo.platilloIndex', compact('platillos'));
     }
 
     /**
@@ -24,7 +25,7 @@ class PlatilloController extends Controller
      */
     public function create()
     {
-        //
+        return view('platillo.platilloCreate');
     }
 
     /**
@@ -46,7 +47,8 @@ class PlatilloController extends Controller
      */
     public function show(Platillo $platillo)
     {
-        //
+        return view('platillo.platilloShow', compact('platillo'));
+        
     }
 
     /**
@@ -57,7 +59,7 @@ class PlatilloController extends Controller
      */
     public function edit(Platillo $platillo)
     {
-        //
+        return view('platillo.platilloCreate');
     }
 
     /**
@@ -80,6 +82,6 @@ class PlatilloController extends Controller
      */
     public function destroy(Platillo $platillo)
     {
-        //
+        return redirect('/platillo');
     }
 }

@@ -16,8 +16,8 @@ class MesaFactory extends Factory
         return [
             'persona'=>$this->faker->numberBetween(1, 10),
             'estado' =>$this->faker->numberBetween(0,1),
-            'created_at' =>$this->faker->date(),
-            'updated_at' =>$this->faker->date(),
+            'updated_at' => now(),
+            'created_at' => now()
             
         ];
     }

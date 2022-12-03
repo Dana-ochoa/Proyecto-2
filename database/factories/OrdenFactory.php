@@ -15,9 +15,9 @@ class OrdenFactory extends Factory
     public function definition()
     {
         return [
-           // 'mesa_id'=>$this->faker->numberBetween(1, 10),
-            'fecha_creacion' =>$this->faker->date(),
-            'fecha_cierre' =>$this->faker->date(),
+            'mesa_id'=> 0,
+            'fecha_creacion' =>now(),
+            'fecha_cierre' =>now(),
             'total' =>$this->faker->randomFloat(2, 200, 1200),
         ];
     }

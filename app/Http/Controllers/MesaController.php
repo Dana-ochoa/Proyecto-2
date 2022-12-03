@@ -14,7 +14,9 @@ class MesaController extends Controller
      */
     public function index()
     {
-        //
+        $mesas = Mesa::all();
+        return view('mesa.mesaIndex', compact('mesas'));
+
     }
 
     /**
@@ -24,7 +26,7 @@ class MesaController extends Controller
      */
     public function create()
     {
-        //
+        return view('mesa.mesaCreate');
     }
 
     /**
@@ -46,7 +48,7 @@ class MesaController extends Controller
      */
     public function show(Mesa $mesa)
     {
-        //
+        return view('mesa.mesaShow', compact('mesa'));
     }
 
     /**
@@ -80,6 +82,6 @@ class MesaController extends Controller
      */
     public function destroy(Mesa $mesa)
     {
-        //
+        return redirect('/mesa');
     }
 }

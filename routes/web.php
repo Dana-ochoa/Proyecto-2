@@ -1,6 +1,11 @@
 <?php
 
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\MesaController;
+use App\Http\Controllers\OrdenController;
+use App\Http\Controllers\PlatilloController;
+use App\Http\Controllers\Platillo_OrdenController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,9 +25,14 @@ Route::get('/', function () {
 
 
 Route::get('/reservacion',[ReservationController::class, 'index']);
+//Route::get('/platillo',[PlatilloController::class, 'index']);
 // Route::get('/reservacion/{id}',[ReservationController::class, 'show']);
 
 Route::resource('/reservation',ReservationController::class);
+Route::resource('/platillo',PlatilloController::class);
+Route::resource('/orden',OrdenController::class);
+Route::resource('/mesa',MesaController::class);
+Route::resource('/platillo_orden',Platillo_OrdenController::class);
 
 Route::middleware([
     'auth:sanctum',

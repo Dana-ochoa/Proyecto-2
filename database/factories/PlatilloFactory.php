@@ -15,7 +15,7 @@ class PlatilloFactory extends Factory
     {
         return [
             'nombre' =>$this->faker->word(),
-            'precio' =>$this->faker->randomFloat(2, 200, 1200),
+            'precio' =>$this->faker->randomFloat(2, 100, 200),
             'cantidad' =>$this->faker->numberBetween(1, 10),
         ];
     }
