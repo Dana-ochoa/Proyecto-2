@@ -4,4 +4,4 @@ Contine un CRUD sobre las reseravacion, asi como vistas para los platilos, orden
 Para la implentacion de los CSS se trabajo con frimeworks como boostrap y Materialize.
 
 NOTA: El proyecto se encuentra en el brach master.
-(Por algun motivo los archivos de la carpeta public no se encuntran, asi que los agregue
+(Por algun motivo los archivos de la carpeta public no se encuntran, asi que que subi la carpeta completa en el main)
