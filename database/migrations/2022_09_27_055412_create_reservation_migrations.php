@@ -21,8 +21,8 @@ class CreateReservationMigrations extends Migration
             $table->string('nombre');
             $table->string('correo');
             $table->string('telefono');
-            //$table->string('correo')->nullable(); (que no es un campo obligatorio)
-            //$table->timestamps();
+            
+           // $table->softDeletes();
         });
     }
 

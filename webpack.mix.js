@@ -11,12 +11,14 @@ const mix = require('laravel-mix');
  |
  */
 
+
 mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css')
     ,js('resources/js/materialize.js','public/js')
     .postCss('resources/css/materialize.css','public/css');
-        //require('postcss-import'),
-        //requiere('tailwindcss'),
+    
+    //require('postcss-import'),
+    //requiere('tailwindcss'),
     
 
 if (mix.inProduction()){

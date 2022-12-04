@@ -20,7 +20,7 @@ class ReservationSeeder extends Seeder
             'personas' => '2',
             'fecha' => '12/06/22',
             'hora' => '07:30',
-            'nombre' => 'Carlos Reyes',
+            'nombre' => 'CEsme Covarrubias',
             'correo' => 'carlos@gmail.com',
             'telefono' => '331254456',
         ];
