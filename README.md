@@ -1,2 +1,3 @@
-# Proyecto-2
-Parte 2 del proyecto de la materia de programacion web
+# PROYECTO FINAL
+el proyecto consiste en una pagina web acerca de un restaurante, con reservaciones, platillos, ordenes y mesas.
+Implementado con boostrap y Materialize.
